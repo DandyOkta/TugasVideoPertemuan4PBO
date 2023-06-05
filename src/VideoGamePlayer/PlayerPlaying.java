@@ -12,8 +12,8 @@ package VideoGamePlayer;
 public class PlayerPlaying {
     public static void main(String[] args) {
         
-        //Menggunakan parameter
-        Player playerone = new Player();
+        //parameter Dikosongkan
+        PlayerMmo playerone = new PlayerMmo();
         
         System.out.println("Player 1");
         playerone.setNama("Misbah");
@@ -24,15 +24,20 @@ public class PlayerPlaying {
         System.out.println("Job   :"+playerone.getJob());
         System.out.println("Level :"+playerone.getLevel());
         
-        //Memanggil nilai mutator
+        //set nilai mutator class Player
         playerone.setMengalahkan(30);
         
+        //Set nilai mutator class PlayerMmo
+        playerone.setExperience(10);
+        
         //Memanggil hasil return dari accesor
-        System.out.println("exp yang dibutuhkan untuk levelup : "+playerone.getExp());
+        System.out.println("exp yang didapatkan : "+playerone.getExp());
+        System.out.println("exp bonus : "+playerone.getexperience());
+        playerone.info("");
         System.out.println("=================================");
         
-        //Menggunakan parameter
-        Player playertwo = new Player();
+        //Parameter Dikosongkan
+        PlayerMmo playertwo = new PlayerMmo();
         
         System.out.println("Player 2");
         playertwo.setNama("Mamanklek");
@@ -43,10 +48,17 @@ public class PlayerPlaying {
         System.out.println("Job   :"+playertwo.getJob());
         System.out.println("Level :"+playertwo.getLevel());
         
-        //Memanggil nilai mutator
+        //set nilai mutator class Player
         playertwo.setMengalahkan(30);
         
+        //Set nilai mutator class PlayerMmo
+        playertwo.setExperience(10);
+        
         //Memanggil hasil return dari accesor
-        System.out.println("exp yang dibutuhkan untuk levelup : "+playertwo.getExp());
+        System.out.println("exp yang didapatkan : "+playertwo.getExp());
+        
+        //Memanggil nilai mutator
+        System.out.println("exp bonus : "+playertwo.getexperience());
+        playertwo.info("");
     }
 }

@@ -10,15 +10,18 @@ package VideoGamePlayer;
  * @author acer
  */
 public class Player {
+    //Enkapsulasi 
     private String Nama, Job;
-    private Integer Level, Exp;
     
-    //Konstruktor
+    //Diganti menjadi protected karena digunakan dalam class PlayerMmo
+    protected Integer Level, Exp;
+    
+    //Konstruktor dihapus
 
     
     //Mutator
     void setMengalahkan(int slime) {
-        Exp = Exp - slime;
+        Exp = Exp + slime;
     }
     
     void setNama(String namaPlayer) {
@@ -54,5 +57,14 @@ public class Player {
     
     public Integer getLevel(){
         return Level;
+    }
+    
+    //Overloading
+    void info(String Job){
+        System.out.println("Kamu Mendapatkan 1 Skill poin");
+    }
+    
+    void info(int Job){
+        System.out.println("Kamu Mendapatkan 1 Skill poin");
     }
 }
